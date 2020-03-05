@@ -105,7 +105,12 @@ menu
 
 remove_file(){
 
-echo 
+echo
+echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+echo "!  ATENÇÃO -> O arquivo a ser removido também será excluído da pasta atual. !"
+echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+echo
+
 echo "Digite o nome do aquivo ser removido:"
 read arquivo
 git rm -f $arquivo
@@ -124,7 +129,12 @@ menu
 
 remove_pasta(){
 
-echo 
+echo
+echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+echo "!  ATENÇÃO -> A pasta a ser removida também será excluída da pasta atual, junto com os arquivos. !"
+echo "!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!"
+echo
+ 
 echo "Digite o nome da pasta ser removido:"
 read pasta
 git rm -r $pasta
