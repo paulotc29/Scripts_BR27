@@ -16,8 +16,9 @@ echo "1-Configurar um novo repositorio"
 echo "2-Adicionar um novo arquivo"
 echo "3-Atualizar um arquivo"
 echo "4-Romover um arquivo"
-echo "5-Listar aquivos disponiveis"
-echo "6-Sair"
+echo "5-Romover uma pasta"
+echo "6-Listar aquivos disponiveis"
+echo "7-Sair"
 echo
 echo -n "Digite a opção desejada:"
 read opcao
@@ -28,8 +29,9 @@ case $opcao in
 2) new_file ;;
 3) update_file ;;
 4) remove_file ;;
-5) list_files ;;
-6) exit ;;
+5) remove_pasta ;;
+6) list_files ;;
+7) exit ;;
 *) 'Opção invalida.' ; echo; menu;;
 
 
@@ -120,6 +122,23 @@ git push -f origin master
 menu
 }
 
+remove_pasta(){
+
+echo 
+echo "Digite o nome da pasta ser removido:"
+read pasta
+git rm -r $pasta
+echo 
+echo "Digite uma mensagem de uptate:"
+read update 
+echo
+
+git commit -m '$update'
+
+git push -f origin master
+
+menu	
+}
 
 list_files(){
 
