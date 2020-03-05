@@ -3,8 +3,9 @@
 echo
 echo "EXEMPLO"
 echo
-echo -e "Viva o \033[01;32mLinux\033[01;37m!"
+echo -e " \033[5;32m Verde  \033[0m" 
 echo
+echo -e " \033[5;31m AGUARDE... \033[0m"
 echo
 
 echo "\033: ainda não consegui encontrar o real motivo de usar isto, mas é obrigatório para usar as cores, se trocar por outra coisa dará tudo errado;"
