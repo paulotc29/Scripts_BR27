@@ -116,6 +116,11 @@ chmod +x ciante.sh
 PON=`cat mac_identification.txt | grep "ge-" | awk '{print$5}' | cut -d "-" -f2`
 #echo $PON
 
+if [[ $PON == "ge-1" ]]; then
+echo "MAC não identificado..."
+exit
+fi
+
 echo " " > pon.txt
 echo "9 1" >> pon.txt
 echo "10 2" >> pon.txt
