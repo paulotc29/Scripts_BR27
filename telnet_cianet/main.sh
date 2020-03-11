@@ -6,16 +6,19 @@ rm ciante.sh table.txt pon.txt sinal.txt
 
 ## CRIAÇÃO DE SCRIPTS
 
+#echo "Informe o mac:"
+#read mac
 
-echo "Informe o mac:"
-read mac
+mac=$1 ## RECEBENDO MAC VIA PARÂMETRO
+MAC=${mac^^} ## CONVERSÃO PARA MAIÚSCULO
+mac2=$mac
+mac2=${mac2//:/-}
 
- mac2=$mac
- mac2=${mac2//:/-}
 
+#echo "Informe o ip da OLT:"
+#read ip_olt
 
-echo "Informe o ip da OLT:"
-read ip_olt
+ip_olt=$2 ## RECEBENDO IP VIA PARÂMETRO
 
 scrip(){
 
@@ -142,7 +145,7 @@ chmod +x ciante.sh
 ./ciante.sh > table.txt
 
 #echo $mac2
-ONU=`cat table.txt | grep --text $mac | awk '{print$3}'`
+ONU=`cat table.txt | grep --text $MAC | awk '{print$3}'`
 
 #echo $ONU
 gera_scrip_passo_03 $id_pon $ONU 
